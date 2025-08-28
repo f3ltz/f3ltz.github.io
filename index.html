@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My GitHub Page</title>
+<title>HTML layout example</title>
 <style>
 body {
 font-family: Arial, sans-serif;
@@ -12,30 +12,136 @@ padding: 20px;
 background-color: #f4f4f4;
 text-align: center;
 }
-h1 {
-color: #333;
+nav a {
+    margin-right: 15px;
+    text-decoration:  none;
+    color: blue;
 }
-p {
-color: #666;
+
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 8px;
 }
-.project {
-margin: 20px 0;
-padding: 15px;
-background-color: #fff;
-border-radius: 5px;
-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+#about-me {
+    border: 2px solid teal;
+    padding: 10px;
+    margin-top: 20px;
+}
+.login-message {
+    margin-top: 10px;
+    font-weight: bold;
 }
 </style>
 </head>
 <body>
-<h1>Welcome to My GitHub Page</h1>
-<p>This is a simple static site hosted on GitHub Pages. Last updated on August 14,
-↪→ 2025.</p>
-<div class="project">
-<h2>Python HTTP Server Project</h2>
-<p>Explore my simple Python HTTP server that responds with "Hello World" on port 8080. Check the <a href="https://github.com/<username>/<repo>/blob/main/server.
-py">server.py</a> code and analyze traffic with Wireshark!</p>
-</div>
-<p>Feel free to customize this page or add more content. Check back for updates!</p>
-</body>
+    <header> 
+        <h1> My Sample Webpage</h1>
+    </header>
+    <nav>
+        <a href="#movies">Movies</a>
+        <a href="#tea"> Make Tea</a>
+        <a href="#students"> Students</a>
+    </nav>
+
+    <section id = "movies">
+        <h2>My Favourtie Movies</h2>
+        <ul>
+            <li>How to train your dragon</li>
+            <li>Cloudy with a chance of meatballs</li>
+            <li>Superman(James Gunn)</li>
+            <li>Ratatouille</li>
+        </ul>
+    </section>
+    <section id="tea"> 
+        <h2>Steps to make a cup of tea</h2>
+        <ol>
+            <li>Boil water.</li>
+            <li>Once the water is boiling add a teaspoon of tea powder.</li>
+            <li>Let it boil for a minute and add sugar.</li>
+            <li>After a while add milk and serve in a cup.</li>
+        </ol>
+    </section>
+
+    <section id="students">
+        <h2>Student Scores</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Score(%)</th>
+            </tr>
+            <tr>
+                <td>Aadithya GB</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Charan Kancheti</td>
+                <td>200</td>
+            </tr>
+        </table>
+    </section>
+    <section>
+        <h2>Subscribe</h2>
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required/>
+            <br/><br/>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required/>
+            <br/><br/>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+  <!-- Section: About Me -->
+  <section id="about-me">
+    <h2>About Me</h2>
+    <p>Hello! I’m an aspiring web developer who enjoys learning HTML, CSS, and JavaScript.</p>
+  </section>
+
+  <!-- Section: Login Form with JS Validation -->
+  <section>
+    <h2>Login</h2>
+    <form id="loginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" required />
+      <br/><br/>
+      <label for="loginPassword">Password:</label>
+      <input type="password" id="loginPassword" required />
+      <br/><br/>
+      <button type="submit">Login</button>
+    </form>
+    <div id="loginMessage" class="login-message"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 My Sample Webpage</p>
+  </footer>
+
+  <!-- JavaScript for Login Validation -->
+  <script>
+    const loginForm = document.getElementById("loginForm");
+    const loginMessage = document.getElementById("loginMessage");
+
+    loginForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("loginPassword").value;
+
+      // Hardcoded credentials
+      const validUsername = "admin";
+      const validPassword = "password123";
+
+      if (username === validUsername && password === validPassword) {
+        loginMessage.textContent = "Login successful!";
+        loginMessage.style.color = "green";
+      } else {
+        loginMessage.textContent = "Invalid credentials.";
+        loginMessage.style.color = "red";
+      }
+    });
+  </script>
+
+
 </html>
