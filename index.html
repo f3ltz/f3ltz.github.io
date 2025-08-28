@@ -1,114 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HTML layout example</title>
-<style>
-body {
-font-family: Arial, sans-serif;
-margin: 0;
-padding: 20px;
-background-color: #f4f4f4;
-text-align: center;
-}
-nav a {
-    margin-right: 15px;
-    text-decoration:  none;
-    color: blue;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Sample Webpage</title>
+  <style>
+    /* Global Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-table, th, td{
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 8px;
-}
-#about-me {
-    border: 2px solid teal;
-    padding: 10px;
-    margin-top: 20px;
-}
-.login-message {
-    margin-top: 10px;
-    font-weight: bold;
-}
-</style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 20px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+      font-size: 2.2em;
+    }
+
+    nav {
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #0066cc;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      margin: 30px 0;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    ul, ol {
+      text-align: left;
+      max-width: 600px;
+      margin: 10px auto;
+      padding-left: 20px;
+    }
+
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+      width: 80%;
+      max-width: 600px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    th {
+      background-color: #f0f0f0;
+      font-weight: bold;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    form label {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+
+    form input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    #about-me {
+      border: 2px solid teal;
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 600px;
+      background-color: #e9fdfd;
+    }
+
+    .login-message {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    footer {
+      margin-top: 40px;
+      color: #666;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
-    <header> 
-        <h1> My Sample Webpage</h1>
-    </header>
-    <nav>
-        <a href="#movies">Movies</a>
-        <a href="#tea"> Make Tea</a>
-        <a href="#students"> Students</a>
-    </nav>
 
-    <section id = "movies">
-        <h2>My Favourtie Movies</h2>
-        <ul>
-            <li>How to train your dragon</li>
-            <li>Cloudy with a chance of meatballs</li>
-            <li>Superman(James Gunn)</li>
-            <li>Ratatouille</li>
-        </ul>
-    </section>
-    <section id="tea"> 
-        <h2>Steps to make a cup of tea</h2>
-        <ol>
-            <li>Boil water.</li>
-            <li>Once the water is boiling add a teaspoon of tea powder.</li>
-            <li>Let it boil for a minute and add sugar.</li>
-            <li>After a while add milk and serve in a cup.</li>
-        </ol>
-    </section>
+  <header>
+    <h1>My Sample Webpage</h1>
+  </header>
 
-    <section id="students">
-        <h2>Student Scores</h2>
-        <table>
-            <tr>
-                <th>Name</th>
-                <th>Score(%)</th>
-            </tr>
-            <tr>
-                <td>Aadithya GB</td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>Charan Kancheti</td>
-                <td>200</td>
-            </tr>
-        </table>
-    </section>
-    <section>
-        <h2>Subscribe</h2>
-        <form>
-            <label for="email">Email:</label>
-            <input type="email" id="email" required/>
-            <br/><br/>
-            <label for="password">Password:</label>
-            <input type="password" id="password" required/>
-            <br/><br/>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+  <nav>
+    <a href="#movies">Movies</a>
+    <a href="#tea">Make Tea</a>
+    <a href="#students">Students</a>
+  </nav>
 
-  <!-- Section: About Me -->
-  <section id="about-me">
-    <h2>About Me</h2>
-    <p>Hello! I’m an aspiring web developer who enjoys learning HTML, CSS, and JavaScript.</p>
+  <section id="movies">
+    <h2>My Favourite Movies</h2>
+    <ul>
+      <li>How to Train Your Dragon</li>
+      <li>Cloudy with a Chance of Meatballs</li>
+      <li>Superman (James Gunn)</li>
+      <li>Ratatouille</li>
+    </ul>
   </section>
 
-  <!-- Section: Login Form with JS Validation -->
+  <section id="tea">
+    <h2>Steps to Make a Cup of Tea</h2>
+    <ol>
+      <li>Boil water.</li>
+      <li>Once the water is boiling, add a teaspoon of tea powder.</li>
+      <li>Let it boil for a minute and add sugar.</li>
+      <li>After a while, add milk and serve in a cup.</li>
+    </ol>
+  </section>
+
+  <section id="students">
+    <h2>Student Scores</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Score(%)</th>
+      </tr>
+      <tr>
+        <td>Aadithya GB</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>Charan Kancheti</td>
+        <td>200</td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Subscribe</h2>
+    <form>
+      <label for="email">Email:</label>
+      <input type="email" id="email" required />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" required />
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section id="about-me">
+    <h2>About Me</h2>
+    <p>Hello! I'm an aspiring web developer who enjoys learning HTML, CSS, and JavaScript.</p>
+  </section>
+
   <section>
     <h2>Login</h2>
     <form id="loginForm">
       <label for="username">Username:</label>
       <input type="text" id="username" required />
-      <br/><br/>
+
       <label for="loginPassword">Password:</label>
       <input type="password" id="loginPassword" required />
-      <br/><br/>
+
       <button type="submit">Login</button>
     </form>
     <div id="loginMessage" class="login-message"></div>
@@ -118,7 +214,6 @@ table, th, td{
     <p>&copy; 2025 My Sample Webpage</p>
   </footer>
 
-  <!-- JavaScript for Login Validation -->
   <script>
     const loginForm = document.getElementById("loginForm");
     const loginMessage = document.getElementById("loginMessage");
@@ -143,5 +238,5 @@ table, th, td{
     });
   </script>
 
-
+</body>
 </html>
